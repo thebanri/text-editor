@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.texteditor.HelloController">
+   <children>
+      <TextArea fx:id="text" layoutX="200.0" layoutY="100.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0" />
+      <MenuBar layoutY="8.0" prefHeight="27.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Dosya">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#open" text="Aç" />
+                  <MenuItem mnemonicParsing="false" onAction="#diffsave" text="Farklı Kaydet" />
+                  <MenuItem mnemonicParsing="false" onAction="#save" text="Kaydet" />
+                  <MenuItem mnemonicParsing="false" onAction="#close" text="Kapat" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Düzenle">
+               <items>
+                  <Menu mnemonicParsing="false" text="Arkaplan Rengi">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#bgred" onMenuValidation="#bgred" text="Kırmızı" />
+                        <MenuItem mnemonicParsing="false" onAction="#bgblue" text="Mavi" />
+                        <MenuItem mnemonicParsing="false" onAction="#bgwhite" text="Beyaz" />
+                        <MenuItem mnemonicParsing="false" onAction="#bgblack" text="Siyah" />
+                        <MenuItem mnemonicParsing="false" onAction="#bgyellow" text="Sarı" />
+                        <MenuItem mnemonicParsing="false" onAction="#bgreen" text="Yeşil" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Yazı Stili">
+                     <items>
+                        <MenuItem mnemonicParsing="false">
+                           <graphic>
+                              <CheckBox fx:id="kalin" mnemonicParsing="false" onAction="#change" text="Kalın" textFill="#070202" />
+                           </graphic></MenuItem>
+                        <MenuItem mnemonicParsing="false">
+                           <graphic>
+                              <CheckBox fx:id="ital" mnemonicParsing="false" onAction="#change" text="İtalik" textFill="#0d0606" />
+                           </graphic></MenuItem>
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Yazı Fontu">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#arial" text="Arial" />
+                        <MenuItem mnemonicParsing="false" onAction="#times" text="Times New Roman" />
+                        <MenuItem mnemonicParsing="false" onAction="#courier" text="Courier" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Yazı Rengi">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Mavi" />
+                        <MenuItem mnemonicParsing="false" text="Kırmızı" />
+                        <MenuItem mnemonicParsing="false" text="Sarı" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Yazı Boyutu">
+                     <items>
+                        <MenuItem mnemonicParsing="false">
+                           <graphic>
+                              <Spinner fx:id="spinner" />
+                           </graphic>
+                        </MenuItem>
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Hizalama">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Sağ" />
+                        <MenuItem mnemonicParsing="false" text="Sol" />
+                        <MenuItem mnemonicParsing="false" text="Orta" />
+                     </items>
+                  </Menu>
+               </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Yardım">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#help" onMenuValidation="#help" text="Nasıl Kullanılır?" />
+               </items></Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>
