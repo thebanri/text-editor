@@ -309,7 +309,7 @@ public class HelloController {
     protected void help(){
 
         try {
-            String url = "https://www.google.com";
+            String url = "https://github.com/thebanri/text-editor/blob/main/README.md";
             String os = System.getProperty("os.name").toLowerCase();
 
             if (os.contains("linux")) {
